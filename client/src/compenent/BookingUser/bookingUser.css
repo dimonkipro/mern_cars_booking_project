@@ -1,0 +1,55 @@
+.ProductUserr {
+    background-color: #000000a3;
+    width: 28rem;
+    height: 20rem;
+    position: absolute;
+    left: 30rem;
+    top: 7.5rem;
+    border-radius: 3%;
+    overflow-x: hidden;
+    color: #b4b2af;
+}
+
+.flx_li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.productUser {
+    width: 3rem;
+    font-size: 1.1rem;
+}
+
+.ulb {
+    padding: 0;
+}
+
+.li {
+    padding: 0;
+}
+
+.li:hover {
+    background-color: #646463;
+
+}
+
+.carimgb {
+    width: 40%;
+}
+
+.carimgb img {
+    width: -webkit-fill-available;
+}
+
+.cancelButton {
+    position: relative;
+    bottom: 5px;
+    left: 325px;
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+hr{
+    width: 100%;
+}

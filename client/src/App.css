@@ -1,0 +1,351 @@
+.charts {
+    display: grid;
+    width: 45%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+}
+
+.charts .grid-item {
+    padding: 1.5rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+
+}
+
+.year-select {
+    font-size: 1.2rem;
+    position: relative;
+    left: 10rem;
+    margin: 2rem 0;
+    background-color: #fffdfdde !important;
+    width: fit-content;
+}
+
+@media (max-width: 576px) {
+    * {
+        color: rgb(217, 255, 0);
+    }
+
+
+    .SideBar-container {
+        display: none;
+    }
+
+    .SideBar-container.open {
+        display: block;
+    }
+
+    .SideBar-container .burger {
+        background-color: transparent !important;
+    }
+
+    .cards {
+
+        grid-template-columns: auto !important;
+        position: absolute;
+        left: -4rem;
+    }
+
+    .card {
+        width: auto !important;
+        height: auto !important;
+    }
+
+
+    .containerPfrl,
+    .charts {
+        width: 80% !important;
+        height: 669px !important;
+        margin: 5rem auto !important;
+        position: static !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .charts {
+        height: auto !important;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .off {
+        padding-left: 0 !important;
+    }
+
+
+    .profImg {
+        position: static !important;
+    }
+
+    .btnSttg {
+        margin-left: 0 !important;
+        position: relative !important;
+        top: 1rem !important;
+    }
+
+    .ProductUser,
+    .ProductUserr {
+        left: 60px !important;
+        top: 21.5rem !important;
+        margin: 2rem 1rem !important;
+        width: 14rem !important;
+
+
+    }
+
+    .containerAdm {
+        left: 3% !important;
+        width: 21rem !important;
+    }
+
+    .row {
+        margin: 5rem 1rem !important;
+    }
+
+    .col-2 {
+        padding: 1rem !important;
+        flex-basis: unset !important;
+    }
+
+    .invoice {
+        margin: 5rem 1rem !important;
+
+    }
+
+    #fr {
+        position: static !important;
+        margin: 5rem auto !important;
+        width: 62% !important;
+    }
+
+    #frsig {
+        margin: 5rem auto !important;
+        width: 62% !important;
+    }
+
+    select {
+        width: fit-content !important;
+    }
+
+    .EditUser {
+        margin: 5rem auto !important;
+        position: static !important;
+        width: auto !important;
+    }
+
+    .btnEdituser,
+    .btnReturn {
+        width: 16rem !important;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+    * {
+        color: red;
+    }
+
+    .SideBar-container {
+        display: none;
+    }
+
+    .SideBar-container.open {
+        display: block;
+    }
+
+    .SideBar-container .burger {
+        background-color: transparent !important;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(34%, 1fr)) !important;
+        position: absolute;
+        left: -4rem;
+    }
+
+    .card {
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .containerPfrl,
+    .charts {
+        left: 19px !important;
+        width: 533px !important;
+        height: 520px !important;
+        margin-top: 2rem;
+    }
+
+    .charts {
+        height: auto !important;
+        grid-template-columns: repeat(1, 1fr);
+        margin: auto;
+
+    }
+
+    .off {
+        padding-left: 0 !important;
+    }
+
+    .btnSttg {
+        margin-left: 4.5rem !important;
+        position: relative !important;
+        top: -4rem !important;
+    }
+
+    .ProductUser,
+    .ProductUserr {
+        left: 4rem !important;
+        top: 15.5rem !important;
+
+    }
+
+    .containerAdm {
+        left: 14% !important;
+        width: 39rem !important;
+    }
+
+    .col-2 {
+        flex-basis: unset !important;
+        padding: 2rem !important;
+    }
+
+    .invoice {
+        margin: 4rem auto !important;
+
+    }
+
+    #fr {
+        position: static !important;
+        margin: 5rem auto !important;
+
+    }
+
+    #frsig {
+        margin: 5rem auto !important;
+    }
+
+    .EditUser {
+        margin: 5rem auto !important;
+        position: static !important;
+    }
+
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    * {
+        color: rgb(0, 98, 255);
+    }
+
+    .SideBar-container .conntent {
+        position: absolute;
+        left: -1px;
+
+    }
+
+    .products {
+        left: 106px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(auto-fill, minmax(34%, 1fr)) !important;
+    }
+
+    .invoice {
+        margin: 2rem auto !important;
+    }
+
+    #fr {
+        left: 28% !important;
+    }
+
+    #frsig {
+        margin-left: 23% !important;
+    }
+
+    .containerPfrl {
+        left: 100px !important;
+        width: 633px !important;
+
+    }
+
+    .charts {
+        height: auto !important;
+        margin-left: 5rem !important;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .off {
+        padding-left: 1rem !important;
+    }
+
+
+
+    .ProductUser,
+    .ProductUserr {
+        left: 16rem !important;
+        top: 11.5rem !important;
+    }
+
+    .containerAdm {
+        left: 14% !important;
+        width: 39rem !important;
+    }
+
+    .col-2 {
+        flex-basis: unset !important;
+        padding: 2rem !important;
+    }
+
+    .EditUser {
+        margin: 5rem auto !important;
+        position: static !important;
+    }
+
+    #footer {
+        width: calc(100% - 8%);
+        left: 8%;
+    }
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    * {
+        color: rgb(255, 0, 230);
+    }
+
+    .card {
+        width: auto !important;
+        height: auto !important;
+    }
+
+    .EditUser {
+        margin: 5rem auto !important;
+        position: static !important;
+    }
+
+    .containerPfrl {
+        left: 247px !important;
+        width: 633px !important;
+    }
+
+    .charts {
+        height: auto !important;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ProductUser,
+    .ProductUserr {
+        left: 25rem !important;
+        top: 12.5rem !important;
+    }
+
+    #footer {
+        width: calc(100% - 8%);
+        left: 9%;
+    }
+}

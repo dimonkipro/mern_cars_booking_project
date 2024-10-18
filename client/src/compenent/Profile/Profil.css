@@ -1,0 +1,40 @@
+.containerPfrl{
+    position: relative;
+    top: 50px;
+    left: 250px;
+    width: 800px;
+    height: 500px;
+    background-color:rgb(0 0 0 / 58%);
+    border-radius: 2%;
+    color: bisque;
+}
+.profImg{
+    width: 150px;
+        border-radius: 20%;
+        position: relative;
+        bottom: 60px;
+        left: 7px;
+}
+.flxPrf{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.desc{
+    margin-left: 20px;
+}
+.btnSttg{
+    padding: 2px;
+    height: 4rem;
+    width: 8rem;
+    border-radius: .6rem;
+    border: none;
+    background-color:rgb(38 131 83);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-left: -8.5rem;
+}
+.btnSttg:hover{
+    background-color:rgba(38, 131, 83, 0.8);
+    
+}

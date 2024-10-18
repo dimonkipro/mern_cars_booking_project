@@ -1,0 +1,55 @@
+.ProductUser {
+    background-color: #000000a3;
+    width: 28rem;
+    height: 20rem;
+    position: absolute;
+    left: 30rem;
+    top: 7.5rem;
+    border-radius: 3%;
+    overflow-x: hidden;
+    color: #ffe4c4;
+}
+
+.btn-delete {
+    border: none;
+    background: none;
+}
+
+.flx_li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+     
+}
+
+.fa-regular {
+    position: relative;
+    top: 10px;
+}
+
+.productUser {
+    
+    width: 3rem;
+    font-size: 1.1rem;
+}
+
+.flx_li a {
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+
+}
+
+
+.ul {
+    padding: 0;
+   
+}
+.ul:hover{
+    background-color: #646463;
+}
+.carimgp{
+    width: 25% ;
+}
+.carimgp img{
+    width: -webkit-fill-available;
+}

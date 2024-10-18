@@ -1,0 +1,5 @@
+ import { useSelector } from "react-redux";
+
+ const isSidebarOpen = useSelector((state) => state.sidebar.isSidebarOpen); // Get sidebar state
+
+className={`products ${!isSidebarOpen ? "productsOpen" : ""}`}

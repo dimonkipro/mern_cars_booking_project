@@ -1,0 +1,59 @@
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  gap: 30px;
+  width: 100%;
+  padding: 5rem 1rem;
+  box-sizing: border-box;
+  justify-items: center;
+  align-items: center;
+  position: relative;
+}
+
+.btnPrvs {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btnpagt {
+
+  font-size: 1.2rem;
+  position: relative;
+  margin: 0 .2rem;
+  border: 1px solid #3a3838;
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffffffa3;
+  text-align: center;
+  border-radius: .3rem;
+  width: 25px;
+}
+
+.btnNext {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.pagination {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem;
+  background-color: rgba(0, 0, 0, 0.477);
+
+}
+.btnpagt.active {
+  background-color: #684125ff;
+  color: white;
+  
+}
+
+.btnpagt:hover {
+  background-color: #68412562;
+}

@@ -1,0 +1,30 @@
+.footer {
+    background-color: #684125d1;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+    position:relative;
+    top: 4rem;
+    
+
+}
+.footer .about{
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+.copy{
+    font-size: large;
+    background-color: #000000c9;
+    padding: .5rem;
+    color: #68412B;
+}
+.footer .header{
+    padding: 1rem;
+}
+.footer .text{
+    line-height: 1.5;
+    padding: .5rem;
+}

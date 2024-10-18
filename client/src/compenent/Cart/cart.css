@@ -1,0 +1,54 @@
+.invoice {
+    max-width: max-content;
+    margin-left: 30%;
+    margin-top: 2rem;
+    border-radius: .5rem;
+    overflow: auto;
+    color: azure;
+    background-color: #000000b5;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    line-height: 1.5;
+}
+
+.text-invoice {
+    color: bisque;
+}
+
+.invoice-p {
+    font-size: 1.1rem;
+}
+
+.total-invoice {
+    font-size: 1.7rem;
+    display: flex;
+    color: #ff9900;
+    justify-content: flex-end;
+}
+
+
+.invoice .btn {
+    width: -webkit-fill-available;
+    padding: 1rem;
+    background-color: #b7980d;
+    border-radius: .5rem;
+    font-weight: 700;
+    font-size: large;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.invoice .btn:hover {
+    background-color: #b7980dc7;
+}
+
+.titlein {
+    text-align: center;
+
+}
+
+.totalin {
+    display: flex;
+    justify-content: space-between;
+}

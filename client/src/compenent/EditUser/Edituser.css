@@ -1,0 +1,42 @@
+.EditUser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 29px;
+    left: 23rem;
+    width: 40rem;
+    height: 46rem;
+    background-color: rgb(0 0 0 / 58%);
+    border-radius: 2%;
+    color: white;
+}
+
+.inpt {
+    width: 20rem;
+    background-color: gray;
+}
+
+.btnEdituser, .btnReturn {
+    width: 35rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border: none;
+    position: relative;
+    left: 3rem;
+    background-color: rgb(38 131 83);
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+}
+.btnReturn{
+    background-color: rgb(169, 169, 61) !important;
+}
+.btnEdituser:hover{
+
+    background-color: rgba(38, 131, 83, 0.8);
+}
+.btnReturn:hover{
+
+    background-color: rgba(169, 169, 61, 0.8) !important ;
+}
