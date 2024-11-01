@@ -8,7 +8,6 @@ import {
   GET_ONEPRODUCT_FAIL,
   EDIT_PRODUCT_SUCCESS,
   SEARCHPRDT,
- 
   DELETE_ONEPRODUCT_SUCCESS,
 } from "../Const/constProduct ";
 import {
@@ -20,14 +19,14 @@ import {
   GET_INVOICES_LOADING,
 } from "../Const/constInvoice";
 
-
 const initialState = {
   products: [],
   oneProduct: {},
   invoice: {},
-  invoices:[],
+  invoices: [],
   errors: null,
   loading: false,
+  addLoading: false,
 };
 
 export const productReducer = (state = initialState, { type, payload }) => {
@@ -39,7 +38,11 @@ export const productReducer = (state = initialState, { type, payload }) => {
     case GET_PRODUCT_FAIL:
       return { ...state, errors: payload, loading: false };
     case ADD_PRODUCT_SUCCESS:
-      return { ...state, products: [...state.products, payload.product] };
+      return {
+        ...state,
+        products: [...state.products, payload.product],
+        addLoading: false,
+      };
     case ADD_PRODUCT_FAIL:
       return { ...state, errors: payload };
     case GET_ONEPRODUCT_SUCCESS:
@@ -55,7 +58,7 @@ export const productReducer = (state = initialState, { type, payload }) => {
           el.name.toLowerCase().includes(payload.trim().toLowerCase())
         ),
       };
-   
+
     case DELETE_ONEPRODUCT_SUCCESS:
       return { ...state };
     default:
