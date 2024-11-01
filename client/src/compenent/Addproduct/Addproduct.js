@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { addProduct } from "../../redux/Actions/actionsProduct";
-import { Html5QrcodeScanner } from "html5-qrcode"; // Import html5-qrcode
+import { Html5QrcodeScanner } from "html5-qrcode"; // Adjust the import if necessary
 
 function AddProduct() {
   const dispatch = useDispatch();
@@ -16,11 +16,8 @@ function AddProduct() {
   const [plate, setPlate] = useState("");
   const [image, setImage] = useState();
   const [category, setCategory] = useState("luxury");
-  // eslint-disable-next-line no-unused-vars
-  const [scannedBarcode, setScannedBarcode] = useState("");
-
-  const scannerRef = useRef(null); // Ref for scanner element
-  const [isScanning, setIsScanning] = useState(false);
+  const [scannerVisible, setScannerVisible] = useState(false);
+  const [scanner, setScanner] = useState(null);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -34,38 +31,41 @@ function AddProduct() {
     dispatch(addProduct(data, navigate));
   };
 
-  // Function to initialize the scanner
   const startScanner = () => {
-    if (scannerRef.current) {
-      const html5QrCodeScanner = new Html5QrcodeScanner(
-        "scanner",
-        { fps: 10, qrbox: { width: 250, height: 250 } },
-        /* verbose= */ false
-      );
+    const html5QrCode = new Html5QrcodeScanner("scanner", {
+      fps: 10,
+      qrbox: 250,
+      rememberLastUsedCamera: true,
+    });
 
-      html5QrCodeScanner.render(
-        (decodedText) => {
-          setScannedBarcode(decodedText);
-          setTitle(decodedText); // Set title to scanned barcode value
-          setIsScanning(false); // Stop scanning after successful scan
-          html5QrCodeScanner.clear(); // Clear scanner after scan
-        },
-        (error) => {
-          console.warn(`QR Code scanning failed: ${error}`);
-        }
-      );
+    html5QrCode.render(
+      (decodedText) => {
+        setTitle(decodedText); // Use the scanned value as the title
+        stopScanner(); // Stop scanning after successful scan
+      },
+      (errorMessage) => {
+        console.warn(`QR Code scanning failed: ${errorMessage}`);
+      }
+    );
+
+    setScanner(html5QrCode); // Store scanner instance
+  };
+
+  const stopScanner = () => {
+    if (scanner) {
+      scanner.clear(); // Clear the scanner
     }
+    setScannerVisible(false); // Hide the scanner
   };
 
   useEffect(() => {
-    if (isScanning) {
+    if (scannerVisible) {
       startScanner();
+    } else {
+      stopScanner();
     }
-  }, [isScanning]);
-
-  const handleStartScan = () => {
-    setIsScanning(true);
-  };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scannerVisible]);
 
   return (
     <div id="backH">
@@ -77,9 +77,27 @@ function AddProduct() {
             type="text"
             placeholder="title"
             id="name"
-            value={title} // Use the `title` state for input
-            onChange={(e) => setTitle(e.target.value)} // Update `title` instead of `scannedBarcode`
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
           />
+
+          {/* Button to toggle scanner visibility */}
+          <button
+            type="button"
+            className="btn"
+            onClick={() => setScannerVisible(!scannerVisible)}
+          >
+            {scannerVisible ? "Close Scanner" : "Scan Barcode"}
+          </button>
+
+          {/* Scanner container */}
+          {scannerVisible && (
+            <div
+              id="scanner"
+              style={{ margin: "20px auto", width: "200px", height: "200px" }}
+            ></div>
+          )}
+
           <label htmlFor="image">Image</label>
           <input
             type="file"
@@ -120,13 +138,6 @@ function AddProduct() {
           </button>
 
           {error && <p style={{ color: "red" }}>{error}</p>}
-
-          <button type="button" onClick={handleStartScan}>
-            {isScanning ? "Scanning..." : "Scan Barcode"}
-          </button>
-
-          {/* Scanner container */}
-          {isScanning && <div id="scanner" ref={scannerRef}></div>}
 
           <div className="social">
             <Link to={"/products"}>Return</Link>

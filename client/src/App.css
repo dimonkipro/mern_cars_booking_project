@@ -23,6 +23,21 @@
     width: fit-content;
 }
 
+#scanner {
+    border-radius: 1rem;
+    border: none !important;
+}
+
+#scanner button {
+    padding: .5rem;
+    border-radius: .6rem;
+    background-color: #b7980d;
+}
+
+#scanner__scan_region video {
+    border-radius: 1rem !important;
+}
+
 @media (max-width: 576px) {
     * {
         color: rgb(217, 255, 0);

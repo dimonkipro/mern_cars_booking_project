@@ -11,12 +11,6 @@
     border-radius: 6px;
 }
 
-#b {
-    margin-left: 10px;
-}
-
-
-
 #fr {
 
     width: 20rem;
@@ -56,7 +50,7 @@ label {
 input {
     display: block;
     height: 3rem;
-    width: 100%;
+    width: -webkit-fill-available;
     background-color: rgba(79, 76, 76, 0.958);
     border-radius: 13px;
     padding: 0 .6rem;
